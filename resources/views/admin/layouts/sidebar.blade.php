@@ -1,0 +1,172 @@
+<aside id="sidebar" class="sidebar">
+    <section class="sidebar-container">
+        <section class="sidebar-wrapper">
+
+            {{--<a href="{{ route('admin.home') }}" class="sidebar-link">--}}
+            <a href="{{ route('admin.dashboard') }}" class="sidebar-link">
+                <i class="fas fa-home"></i>
+                <span>خانه</span>
+            </a>
+
+            {{--<section class="sidebar-part-title">بخش پرداخت ها</section>--}}
+
+            {{--<section class="sidebar-group-link">--}}
+                {{--<section class="sidebar-dropdown-toggle">--}}
+                    {{--<i class="fas fa-chart-bar icon"></i>--}}
+                    {{--<span>ویترین</span>--}}
+                    {{--<i class="fas fa-angle-left angle"></i>--}}
+                {{--</section>--}}
+                {{--<section class="sidebar-dropdown">--}}
+                    {{--<a href="{{ route('admin.market.category.index') }}">دسته بندی</a>--}}
+                    {{--<a href="{{ route('admin.market.property.index') }}">فرم کالا</a>--}}
+                    {{--<a href="{{ route('admin.market.brand.index') }}">برندها</a>--}}
+                    {{--<a href="{{ route('admin.market.product.index') }}">کالاها</a>--}}
+                    {{--<a href="{{ route('admin.market.store.index') }}">انبار</a>--}}
+                    {{--<a href="{{ route('admin.market.comment.index') }}">نظرات</a>--}}
+                    {{--<a href="#">نظرات</a>--}}
+                {{--</section>--}}
+            {{--</section>--}}
+
+            {{--<section class="sidebar-group-link">--}}
+                {{--<section class="sidebar-dropdown-toggle">--}}
+                    {{--<i class="fas fa-chart-bar icon"></i>--}}
+                    {{--<span>سفارشات</span>--}}
+                    {{--<i class="fas fa-angle-left angle"></i>--}}
+                {{--</section>--}}
+                {{--<section class="sidebar-dropdown">--}}
+              {{--      <a href="{{ route('admin.market.order.newOrders') }}"> جدید</a>
+                    <a href="{{ route('admin.market.order.sending') }}">در حال ارسال</a>
+                    <a href="{{ route('admin.market.order.unpaid') }}">پرداخت نشده</a>
+                    <a href="{{ route('admin.market.order.canceled') }}">باطل شده</a>
+                    <a href="{{ route('admin.market.order.returned') }}">مرجوعی</a>
+                    <a href="{{ route('admin.market.order.all') }}">تمام سفارشات</a>--}}
+                    {{--<a href="#">تمام سفارشات</a>--}}
+                {{--</section>--}}
+            {{--</section>--}}
+
+          {{--  <section class="sidebar-group-link">
+                <section class="sidebar-dropdown-toggle">
+                    <i class="fas fa-chart-bar icon"></i>
+                    <span>پرداخت ها</span>
+                    <i class="fas fa-angle-left angle"></i>
+                </section>
+                <section class="sidebar-dropdown">
+                  <a href="#">تمام پرداخت ها</a>
+                    <a href="#">پرداخت های موفق</a>
+                    <a href="#">پرداخت های ناموفق</a>
+
+
+                </section>
+            </section>--}}
+
+           {{-- <section class="sidebar-group-link">
+                <section class="sidebar-dropdown-toggle">
+                    <i class="fas fa-chart-bar icon"></i>
+                    <span>تخفیف ها</span>
+                    <i class="fas fa-angle-left angle"></i>
+                </section>
+                <section class="sidebar-dropdown">
+                    <a href="{{ route('admin.market.discount.copan') }}">کپن تخفیف</a>
+                    <a href="{{ route('admin.market.discount.commonDiscount') }}">تخفیف عمومی</a>
+                    <a href="{{ route('admin.market.discount.amazingSale') }}">فروش شگفت انگیز</a>
+                </section>
+            </section>--}}
+
+          {{--  <a href="{{ route('admin.market.delivery.index') }}" class="sidebar-link">
+                <i class="fas fa-bars"></i>
+                <span>روش های ارسال</span>
+            </a>--}}
+
+
+
+            {{--<section class="sidebar-part-title">بخش محتوی</section>--}}
+          {{--  <a href="{{ route('admin.content.category.index') }}" class="sidebar-link">
+                <i class="fas fa-bars"></i>
+                <span>دسته بندی</span>
+            </a>--}}
+          {{--  <a href="#" class="sidebar-link">
+                <i class="fas fa-bars"></i>
+                <span>دسته بندی</span>
+            </a>
+
+            <a href="#" class="sidebar-link">
+                <i class="fas fa-bars"></i>
+                <span>پست ها</span>
+            </a>
+            <a href="#" class="sidebar-link">
+                <i class="fas fa-bars"></i>
+                <span>نظرات</span>
+            </a>
+            <a href="#" class="sidebar-link">
+                <i class="fas fa-bars"></i>
+                <span>منو</span>
+            </a>
+            <a href="#" class="sidebar-link">
+                <i class="fas fa-bars"></i>
+                <span>سوالات متداول</span>
+            </a>
+            <a href="#" class="sidebar-link">
+                <i class="fas fa-bars"></i>
+                <span>پیج ساز</span>
+            </a>--}}
+
+
+
+            <section class="sidebar-part-title">بخش تراکنشها</section>
+            <a href="{{ route('admin.market.alltransaction.index') }}" class="sidebar-link">
+                <i class="fas fa-search-dollar"></i>
+                <span>همه تراکنشها</span>
+            </a>
+            <a href="{{ route('admin.market.successtransaction.index') }}" class="sidebar-link">
+                <i class="fas fa-search-dollar"></i>
+                <span>تراکنشهای موفق</span>
+            </a>
+            <a href="{{ route('admin.market.failedtransaction.index') }}" class="sidebar-link">
+                <i class="fas fa-search-dollar"></i>
+                <span>تراکنشهای ناموفق</span>
+            </a>
+
+
+
+
+          {{--  <section class="sidebar-part-title">تیکت ها</section>--}}
+           {{-- <a href="#" class="sidebar-link">
+                <i class="fas fa-bars"></i>
+                <span>تیکت های جدید</span>
+            </a>--}}
+           {{-- <a href="#" class="sidebar-link">
+                <i class="fas fa-bars"></i>
+                <span>تیکت های باز</span>
+            </a>--}}
+          {{--  <a href="#" class="sidebar-link">
+                <i class="fas fa-bars"></i>
+                <span>تیکت های بسته</span>
+            </a>--}}
+
+
+
+            {{--<section class="sidebar-part-title">اطلاع رسانی</section>
+            <a href="#" class="sidebar-link">
+                <i class="fas fa-bars"></i>
+                <span>اعلامیه ایمیلی</span>
+            </a>
+            <a href="#" class="sidebar-link">
+                <i class="fas fa-bars"></i>
+                <span>اعلامیه پیامکی</span>
+            </a>--}}
+
+          {{--  {{ route('admin.setting.merchant') }}--}}
+
+            <section class="sidebar-part-title">تنظیمات</section>
+            <a href="{{ route('admin.market.merchant.index') }}" class="sidebar-link">
+                <i class="fas fa-cog"></i>
+                <span>تنظیمات مرچنت کد</span>
+            </a>
+            <a href="{{ route('admin.market.admininfo.index') }}" class="sidebar-link">
+                <i class="fas fa-cog"></i>
+                <span>تنظیمات ادمین</span>
+            </a>
+
+        </section>
+    </section>
+</aside>
