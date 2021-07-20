@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Validator;
 
 class MerchantController extends Controller
 {
@@ -33,7 +34,7 @@ class MerchantController extends Controller
     }
 
     public function getMerchantFromView(Request $request){
-     /*  $rules=[
+/*      $rules=[
             'merchant'=>'required',
 
 
@@ -45,6 +46,8 @@ class MerchantController extends Controller
         ];
        $this->validate($request, $rules, $customMessages);*/
 
+
+
         $merchant = $request->input('merchant');
         $mid=DB::table('merchants')->latest()->first();
         $mId=$mid->id;
@@ -52,13 +55,12 @@ class MerchantController extends Controller
         if ($lastMerchant ==""){
             $lastMerchant='empty';
         }*/
-       if ($merchant ==""){
+       if ($merchant !=""){
 
-           $merchant='empty';
+         //  $merchant='empty';
+          // DB::update('update merchants set merchantCode= ? where id = ?',[$merchant,$mId]);
            DB::update('update merchants set merchantCode= ? where id = ?',[$merchant,$mId]);
 
-       }else {
-           DB::update('update merchants set merchantCode= ? where id = ?',[$merchant,$mId]);
        }
 
        // return dd($lastMerchant);
@@ -106,7 +108,17 @@ class MerchantController extends Controller
      */
     public function edit($id)
     {
-        //
+       /* $rules=[
+            'merchant'=>'required',
+
+
+        ];
+        $customMessages = [
+            'required' => 'ورودی نباید خالی باشد',
+
+
+        ];
+        $this->validate($request, $rules, $customMessages);*/
     }
 
     /**

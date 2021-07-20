@@ -45,12 +45,14 @@ Route::prefix('admin')->group(function() {
             Route::get('/', [MerchantController::class, 'index'])->name('admin.market.merchant.index');
             Route::get('/create', [MerchantController::class, 'create'])->name('admin.market.merchant.create');
             Route::post('/store', [MerchantController::class, 'store'])->name('admin.market.merchant.store');
-            Route::get('/edit/{id}', [MerchantController::class, 'edit'])->name('admin.market.merchant.edit');
-            Route::put('/update/{id}', [MerchantController::class, 'edit'])->name('admin.market.merchant.update');
+
             Route::delete('/delete/{id}', [MerchantController::class, 'destroy'])->name('admin.market.merchant.destroy');
             Route::post('/editmerchant', [MerchantController::class, 'getMerchantFromView'])->name("merchant.send");
             Route::get('/editmerchant', [MerchantController::class, 'getMerchantFromView'])->name("merchant.send");
             // Route::get('/', [MerchantController::class, 'getMerchantFromView'])->name('admin.market.merchant.create');
+
+            Route::get('/edit/{id}', [MerchantController::class, 'edit'])->name('admin.market.merchant.edit');
+            Route::put('/update/{id}', [MerchantController::class, 'edit'])->name('admin.market.merchant.update');
 
 
 
@@ -124,7 +126,7 @@ Route::group(['middleware'=> ['XssSanitizer']], function(){
 
     Route::get('/payment', 'PaymentController@payment');
     Route::get('/verifypayment', 'PaymentController@verifypayment');
-    Route::post('/verifypayment', 'PaymentController@verifypayment')->name("payment.send");
+    Route::post('/verifypayment', 'PaymentController@verifypayment');
     Route::post('/payment', 'PaymentController@payment')->name("payment.send");
     Route::get('/',function (){
 

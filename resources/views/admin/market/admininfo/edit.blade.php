@@ -97,11 +97,11 @@
                 @endif--}}
                 <form id="admin_info_submit" method="POST" action="{{ route('admininfo.send') }}">
                     {{ csrf_field() }}
-                    <input class="form-control" type=text name=adminName placeholder="نام ادمین" value="{{ 'adminName' }}" required autofocus>
+                    <input class="form-control" type=text name=adminName placeholder="نام ادمین" value="" required autofocus>
                     <br>
-                    <input class="form-control" type=email name=adminEmail placeholder="ایمیل ادمین" value="{{ 'adminEmail' }}" required autofocus>
+                    <input class="form-control" type=email name=adminEmail placeholder="ایمیل ادمین" value="" required autofocus>
                     <br>
-                    <input class="form-control" type=password name=adminPassword placeholder="پسورد ادمین" value="{{ 'adminPassword' }}" required autofocus>
+                    <input class="form-control" type=password name=adminPassword placeholder="پسورد ادمین" value="" required autofocus>
                   {{--  @if ($errors->has('merchant'))
                         <span ><strong>{{ $errors->first('merchant') }}</strong></span>
                     @endif--}}

@@ -88,19 +88,22 @@
                 </section>--}}
              {{--   --}}
                 <div id="formContent">
-                    @if ($errors->any())
-                        <div class="alert alert-danger">
-                            <ul>
-                                @foreach ($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    @endif
+
                     <form id="merchant_id_submit" method="POST" action="{{ route('merchant.send') }}">
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
 
                         @csrf
-                        <input class="form-control" id="merchant"  type=text name="merchant" placeholder="مرچنت کد درگاه" value="{!!strip_tags('merchant' ) !!}" required autofocus>
+<!--                            minlength="36" maxlength="36"-->
+{{--<!--                            {!!strip_tags('merchant' ) !!}-->--}}
+                        <input class="form-control" id="merchant"  type=text   minlength="36" maxlength="36" required name="merchant" placeholder="مرچنت کد درگاه" value="" >
 
                         {{--  @if ($errors->has('merchant'))
                               <span ><strong>{{ $errors->first('merchant') }}</strong></span>

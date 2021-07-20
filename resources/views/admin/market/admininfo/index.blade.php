@@ -93,10 +93,10 @@
                 <div style="font-size: large">
                     ادرس ایمیل ادمین : {{$aemail}}  </div>
                 <br>
-                <div style="font-size: large">
+<!--                <div style="font-size: large">
                     پسورد ادمین :  {{$apassword}} </div>
 
-                <br>
+                <br>-->
 
 
                     {{--<input class="btn btn-success btn-md" type="submit" style="font-family: IRAN Sans, serif"   value="ذخیره">--}}

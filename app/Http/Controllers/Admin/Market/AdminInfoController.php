@@ -65,17 +65,12 @@ class AdminInfoController extends Controller
              $lastMerchant='empty';
          }*/
 
-        if ($adminName =="" ||$adminEmail=="" ||$adminPassword=="" ){
-
-            $aname='empty';
-            $aemail='empty';
-            $aepassword='empty';
-            DB::update('update admins set  name=? , email=? , password=? where id = ?',[$aname,$aemail,$aepassword,$aId]);
-
-        }else {
+        if ($adminName !="" ||$adminEmail!="" ||$adminPassword!="" ){
             $adminPassword=bcrypt($adminPassword);
             DB::update('update admins set  name=? , email=? , password=? where id = ?',[$adminName,$adminEmail,$adminPassword,$aId]);
+
         }
+
 
         // return dd($lastMerchant);
         return view('admin.market.admininfo.edit');
