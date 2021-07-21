@@ -62,6 +62,12 @@ class PaymentController extends Controller
         $this->validate($request, $rules, $customMessages);
 
         $merchantcodes=DB::table('merchants')->latest()->first();
+        $websiteAddress=DB::table('websitename')->latest()->first();
+        if ($websiteAddress==""){
+
+            $websiteAddress="defaultvalue";
+
+        }
         $merchantId=$merchantcodes->merchantCode;
         $request->session()->put('amount', $request->amount);
         $name = $request->input('fullname');
@@ -73,7 +79,7 @@ class PaymentController extends Controller
         if($mobile =="" || $email ==""){
             $data = array("merchant_id" =>$merchantId,
                 "amount" => $amountValue,
-                "callback_url" => "http://127.0.0.1:8000/verifypayment",
+                "callback_url" => $websiteAddress."/verifypayment",
                 "description" => $description,
 
             );
@@ -82,7 +88,7 @@ class PaymentController extends Controller
 
             $data = array("merchant_id" => $merchantId,
                 "amount" => $amountValue,
-                "callback_url" => "http://127.0.0.1:8000/verifypayment",
+                "callback_url" => $websiteAddress."/verifypayment",
                 "description" => $description,
                 "metadata" => [ "email" => $email,"mobile"=>$mobile],
             );
