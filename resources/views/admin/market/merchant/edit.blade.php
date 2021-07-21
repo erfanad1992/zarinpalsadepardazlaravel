@@ -32,61 +32,6 @@
                     {{--</div>--}}
                 </section>
 
-            {{--    <section class="table-responsive">
-                    <form id="merchant_id_submit" method="POST" action="">
-                        {{ csrf_field() }}
-                        <input type=text name=merchant placeholder="مرچنت کد درگاه" value="{{ old('merchant') }}" required autofocus>
-
-                        @if ($errors->has('email'))
-                            <span ><strong>{{ $errors->first('email') }}</strong></span>
-                        @endif
-
-                        <br><br/>
-
-
-                        <input type="submit" style="font-family: IRAN Sans, serif"   value="ذخیره">
-                    </form>
-                  --}}{{--  <table class="table table-striped table-hover">
-                        <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>نام دسته بندی</th>
-                            <th>دسته والد</th>
-                            <th><i class="fa fa-cogs"></i>تنظیمات</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                     --}}{{----}}{{--   <tr>
-                            <th>1</th>
-                            <td>نمایشگر	</td>
-                            <td>کالای الکترونیکی</td>
-                            <td>
-                                <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i>ویرایش</a>
-                                <button class="btn btn-danger btn-sm" type="submit"><i class="fa fa-trash-alt"></i>حذف</button>
-                            </td>
-                        </tr>--}}{{----}}{{--
-                   --}}{{----}}{{--     <tr>
-                            <th>2</th>
-                            <td>نمایشگر	</td>
-                            <td>کالای الکترونیکی</td>
-                            <td>
-                                <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i>ویرایش</a>
-                                <button class="btn btn-danger btn-sm" type="submit"><i class="fa fa-trash-alt"></i>حذف</button>
-                            </td>
-                        </tr>--}}{{----}}{{--
-                      --}}{{----}}{{--  <tr>
-                            <th>3</th>
-                            <td>نمایشگر	</td>
-                            <td>کالای الکترونیکی</td>
-                            <td>
-                                <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i>ویرایش</a>
-                                <button class="btn btn-danger btn-sm" type="submit"><i class="fa fa-trash-alt"></i>حذف</button>
-                            </td>
-                        </tr>--}}{{----}}{{--
-                        </tbody>
-                    </table>--}}{{--
-                </section>--}}
-             {{--   --}}
                 <div id="formContent">
 
                     <form id="merchant_id_submit" method="POST" action="{{ route('merchant.send') }}">

@@ -24,13 +24,7 @@
                         تراکنشهای ناموفق
                     </h5>
                 </section>
-{{--
-                <section class="d-flex justify-content-between align-items-center mt-4 mb-3 border-bottom">
-                    --}}{{--<a href="#" class="btn btn-info btn-sm">ایجاد دسته بندی</a>--}}{{--
-                    --}}{{--<div class="width-16-rem">--}}{{--
-                        --}}{{--<input type="text" class="form-control form-control-sm form-text" placeholder="جستجو">--}}{{--
-                    --}}{{--</div>--}}{{--
-                </section>--}}
+
 
                 <section class="table-responsive">
 

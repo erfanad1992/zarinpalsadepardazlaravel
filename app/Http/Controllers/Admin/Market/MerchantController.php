@@ -24,12 +24,6 @@ class MerchantController extends Controller
         $mid=DB::table('merchants')->latest()->first();
         $mId=$mid->id;
        $lastMerchant=$mid->merchantCode;
-        //$lastMerchant="hhhhhhh";
-        if ($lastMerchant ==""){
-            $lastMerchant='empty';
-        }
-
-       // return dd($lastMerchant);
         return view('admin.market.merchant.index',compact('lastMerchant'));
     }
 
@@ -51,21 +45,15 @@ class MerchantController extends Controller
         $merchant = $request->input('merchant');
         $mid=DB::table('merchants')->latest()->first();
         $mId=$mid->id;
-       /* $lastMerchant=$mid->merchantCode;
-        if ($lastMerchant ==""){
-            $lastMerchant='empty';
-        }*/
        if ($merchant !=""){
 
-         //  $merchant='empty';
-          // DB::update('update merchants set merchantCode= ? where id = ?',[$merchant,$mId]);
+
            DB::update('update merchants set merchantCode= ? where id = ?',[$merchant,$mId]);
 
        }
 
-       // return dd($lastMerchant);
+
         return view('admin.market.merchant.edit');
-       // return redirect('http://127.0.0.1:8000/admin/market/merchant');
     }
 
     /**

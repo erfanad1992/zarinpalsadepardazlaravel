@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\Market\AdminInfoController;
 use App\Http\Controllers\Admin\Market\AllTransactionController;
 use App\Http\Controllers\Admin\Market\FailTransactionController;
 use App\Http\Controllers\Admin\Market\SuccessTransactionController;
+use App\Http\Controllers\Admin\Market\WebsiteAddressController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
@@ -67,6 +68,21 @@ Route::prefix('admin')->group(function() {
             Route::delete('/delete/{id}', [AdminInfoController::class, 'destroy'])->name('admin.market.admininfo.destroy');
             Route::post('/editadmin', [AdminInfoController::class, 'getAdminFromView'])->name("admininfo.send");
             Route::get('/editadmin', [AdminInfoController::class, 'getAdminFromView'])->name("admininfo.send");
+            // Route::get('/', [MerchantController::class, 'getMerchantFromView'])->name('admin.market.merchant.create');
+
+
+
+        });
+
+        Route::prefix('websiteaddress')->group(function(){
+            Route::get('/', [WebsiteAddressController::class, 'index'])->name('admin.market.websiteaddress.index');
+            Route::get('/create', [WebsiteAddressController::class, 'create'])->name('admin.market.websiteaddress.create');
+            Route::post('/store', [WebsiteAddressController::class, 'store'])->name('admin.market.websiteaddress.store');
+            Route::get('/edit/{id}', [WebsiteAddressController::class, 'edit'])->name('admin.market.websiteaddress.edit');
+            Route::put('/update/{id}', [WebsiteAddressController::class, 'edit'])->name('admin.market.websiteaddress.update');
+            Route::delete('/delete/{id}', [WebsiteAddressController::class, 'destroy'])->name('admin.market.websiteaddress.destroy');
+            Route::post('/editwebsite', [WebsiteAddressController::class, 'getwebsiteFromView'])->name("websiteaddress.send");
+            Route::get('/editwebsite', [WebsiteAddressController::class, 'getwebsiteFromView'])->name("websiteaddress.send");
             // Route::get('/', [MerchantController::class, 'getMerchantFromView'])->name('admin.market.merchant.create');
 
 

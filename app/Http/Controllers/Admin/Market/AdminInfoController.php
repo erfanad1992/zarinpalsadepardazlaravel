@@ -27,12 +27,6 @@ class AdminInfoController extends Controller
         $aemail=$aid->email;
         $apassword=$aid->password;
         //$lastMerchant=$mid->merchantCode;
-        //$lastMerchant="hhhhhhh";
-//        if ($lastMerchant ==""){
-//            $lastMerchant='empty';
-//        }
-
-        // return dd($lastMerchant);
         return view('admin.market.admininfo.index',compact('aname','aemail','apassword'));
     }
 
@@ -60,10 +54,6 @@ class AdminInfoController extends Controller
         $aname=$aid->name;
         $aemail=$aid->email;
         $aepassword=$aid->password;
-        /* $lastMerchant=$mid->merchantCode;
-         if ($lastMerchant ==""){
-             $lastMerchant='empty';
-         }*/
 
         if ($adminName !="" ||$adminEmail!="" ||$adminPassword!="" ){
             $adminPassword=bcrypt($adminPassword);
@@ -71,11 +61,8 @@ class AdminInfoController extends Controller
 
         }
 
-
-        // return dd($lastMerchant);
         return view('admin.market.admininfo.edit');
-        // return redirect('http://127.0.0.1:8000/admin/market/merchant');
-    }
+      }
 
     /**
      * Show the form for creating a new resource.
