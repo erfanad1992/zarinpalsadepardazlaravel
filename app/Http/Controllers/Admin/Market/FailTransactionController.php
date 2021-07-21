@@ -21,7 +21,7 @@ class FailTransactionController extends Controller
     public function index()
     {
 
-        $transactions=DB::select('SELECT * FROM payments INNER JOIN users ON payments.user_id = users.id where refid = \'0\' and Status=\'تراکنش ناموفق است\' ');
+        $transactions=DB::select('SELECT * FROM payments INNER JOIN users ON payments.user_id = users.id where (Status IS NULL or Status="تراکنش ناموفق است")  ');
         //dd($payments);
 
         return view('admin.market.failedtransaction.index',compact('transactions'));

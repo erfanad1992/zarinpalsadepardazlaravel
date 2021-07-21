@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 21, 2021 at 08:12 AM
+-- Generation Time: Jul 21, 2021 at 08:45 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.3
 
@@ -78,7 +78,7 @@ CREATE TABLE `merchants` (
 --
 
 INSERT INTO `merchants` (`id`, `merchantCode`, `created_at`, `updated_at`) VALUES
-(2, 'defaultvalue', NULL, NULL);
+(2, 'cfa83c81-89b0-4993-9445-2c3fcd323455', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -135,6 +135,15 @@ CREATE TABLE `payments` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `payments`
+--
+
+INSERT INTO `payments` (`id`, `Authority`, `refid`, `Amount`, `Description`, `Status`, `user_id`, `created_at`, `updated_at`) VALUES
+(7, 'A00000000000000000000000000271247578', '0', '2323213', 'TEST', 'تراکنش ناموفق است', 8, '2021-07-21 01:51:47', '2021-07-21 01:51:47'),
+(8, 'A00000000000000000000000000271247615', '0', '1234', 'TEST', 'تراکنش ناموفق است', 9, '2021-07-21 01:52:09', '2021-07-21 01:52:09'),
+(9, 'A00000000000000000000000000271368964', '0', '1234', 'تست', 'تراکنش ناموفق است', 10, '2021-07-21 13:56:21', '2021-07-21 13:56:21');
+
 -- --------------------------------------------------------
 
 --
@@ -156,7 +165,16 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `fullname`, `email`, `mobile`, `remember_token`, `created_at`, `updated_at`) VALUES
+(2, 'فثسف فثسفس', 'zarinpal@test.com', '09121111111', NULL, '2021-07-18 05:47:38', '2021-07-18 05:47:38'),
+(3, 'test test', 'zarinpal@test.com', '09121111111', NULL, '2021-07-19 10:37:26', '2021-07-19 10:37:26'),
+(4, 'فثسف فثسفس', 'zarinpal@test.com', '09121111111', NULL, '2021-07-19 12:19:06', '2021-07-19 12:19:06'),
+(5, 'عرفان درویش نیا', 'zarinpal@test.com', '09390283454', NULL, '2021-07-19 14:58:21', '2021-07-19 14:58:21'),
 (6, 'test test', 'zarinpal@test.com', '09365429163', NULL, '2021-07-19 16:52:19', '2021-07-19 16:52:19'),
+(7, 'عنمران', 'han.taei@gmail.com', '09390283454', NULL, '2021-07-20 10:53:34', '2021-07-20 10:53:34'),
+(8, 'عنمران', 'admin@gmail.com', '09124185723', NULL, '2021-07-21 01:51:47', '2021-07-21 01:51:47'),
+(9, 'عنمران', 'admin@gmail.com', '09124185723', NULL, '2021-07-21 01:52:09', '2021-07-21 01:52:09'),
+(10, 'test test', 'zarinpal@test.com', '09121111111', NULL, '2021-07-21 13:56:21', '2021-07-21 13:56:21');
+
 -- --------------------------------------------------------
 
 --
@@ -175,7 +193,7 @@ CREATE TABLE `websitename` (
 --
 
 INSERT INTO `websitename` (`id`, `websiteAdd`, `created_at`, `updated_at`) VALUES
-(2, 'defaultvalue', NULL, NULL);
+(2, 'http://127.0.0.1:8000', NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -263,13 +281,13 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `payments`
 --
 ALTER TABLE `payments`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `websitename`
