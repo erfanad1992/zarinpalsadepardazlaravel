@@ -62,7 +62,8 @@ class PaymentController extends Controller
         $this->validate($request, $rules, $customMessages);
 
         $merchantcodes=DB::table('merchants')->latest()->first();
-        $websiteAddress=DB::table('websitename')->latest()->first();
+        $website=DB::table('websitename')->latest()->first();
+        $websiteAddress=$website->websiteAdd;
         if ($websiteAddress==""){
 
             $websiteAddress="defaultvalue";
