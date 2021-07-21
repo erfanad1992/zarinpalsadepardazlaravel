@@ -44,7 +44,7 @@
             </div>
         @endif
         <form method="post" action="{{ route('payment.send') }}">
-            @csrf
+            {{ csrf_field() }}
             <input type="text" style="font-family: IRAN Sans, serif"   id="fullname" name="fullname" placeholder="نام و نام خانوادگی"
                    value="{!!strip_tags(old('fullname') ) !!}" required>
 
