@@ -42,6 +42,7 @@ class PaymentController extends Controller
 
 
 
+
         $rules=[
             'fullname'=>'required',
             'amount' =>'required|between:1100,50000000|numeric',
@@ -173,13 +174,13 @@ class PaymentController extends Controller
 
             $authority=$SessionAuthority;
         }
-        if ($sessionAmount == $amountValue)
-        {
-            $amountValue=$authoritys->Amount;
-        }
-        else {
-            $amountValue = $sessionAmount;
-        }
+        //  if ($sessionAmount == $amountValue)
+        //  {
+        //      $amountValue=$authoritys->Amount;
+        // }
+        // else {
+        //       $amountValue = $sessionAmount;
+        //  }
 
 
 
@@ -223,7 +224,7 @@ class PaymentController extends Controller
 
                         echo "<div style='font-size: xx-large; color: darkred; background-color: rgba(255,113,79,0.67);text-align: center;'> تراکنش ناموفق با کد :$errorcode </div>";
 
-
+                        //echo $errormessage;
 
                     }
                 }else {
@@ -240,6 +241,7 @@ class PaymentController extends Controller
                 DB::update('update payments set refid = ? , Status = ? where id = ?',[0,"تراکنش ناموفق است",$authorityId]);
 
                 echo "<div style='font-size: xx-large; color: darkred; background-color: rgba(255,113,79,0.67);text-align: center;'> تراکنش ناموفق با کد :$errorcode </div>";
+                // dd($sessionAmount) ;
 
             }
 
