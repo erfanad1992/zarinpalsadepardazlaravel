@@ -24,10 +24,14 @@ class AdminController extends Controller
             ->where('payments.refid', '!=', 0)
             ->where('payments.Status','=','تراکنش موفق است')
             ->sum('payments.Amount');
-        $failedransactionsum = DB::table('payments')
+        $failedransactionsum1 = DB::table('payments')
             ->where('payments.refid', '=', 0)
             ->where('payments.Status','=','تراکنش ناموفق است')
             ->sum('payments.Amount');
+        $failedransactionsum2=DB::table('payments')
+            ->where('payments.Status', '=', NULL)
+            ->sum('payments.Amount');
+        $failedransactionsum=$failedransactionsum1+$failedransactionsum2;
         $successtransactionsum = preg_replace('/\h*\.+\h*(?!.*\.)/', ' ', $successtransactionsum);
         $failedransactionsum = preg_replace('/\h*\.+\h*(?!.*\.)/', ' ', $failedransactionsum);
        // dd($successtransactionsum);
